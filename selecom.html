@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecom</title>
+    <link rel="stylesheet" href="selecom.css">
+    <script src="https://kit.fontawesome.com/0ddf7b2360.js" crossorigin="anonymous"></script>
+    
+</head>
+
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html#accueil">
+                    <img src="public/logo BV.png" alt="Logo BV">
+                </a>
+            </div>            
+            <ul class="menu-hover-fill flex flex-col items-start leading-none text-2xl uppercase space-y-4">
+                <li class="dropdown">
+                    <a href="#formations" data-text="Formations">Formations</a>
+                    <ul class="dropdown-content">
+                        <li><a href="https://www.esaip.org/formation/ingenieur-en-sante-securite-amp-environnement/" target="_blank" rel="noopener noreferrer">ESAIP</a></li>
+                        <li><a href="https://iutnantes.univ-nantes.fr/formations/bachelor-iut-bac3/but-gmp" target="_blank" rel="noopener noreferrer">BUT GMP</a></li>
+                        <li><a href="https://appert.paysdelaloire.e-lyco.fr/etablissement/" target="_blank" rel="noopener noreferrer">Lycée Général</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#experiences" data-text="Expériences">Expériences</a>
+                    <ul class="dropdown-content">
+                        <li><a href="vinci.html">Vinci Facilities</a></li>
+                        <li><a href="msm.html">MSM</a></li>
+                        <li><a href="proman.html">Proman</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#realisations" data-text="Réalisations">Réalisations</a>
+                    <ul class="dropdown-content">
+                        <li><a href="ecole.html">Projets d'école</a></li>
+                        <li><a href="travail.html">Projets d'entreprise</a></li>
+                        <li><a href="personnel.html">Projets personnels</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#centre" data-text="Centres d'intérêt">Centres d'intérêt</a>
+                    <ul class="dropdown-content">
+                        <li><a href="cliff.html">Cliff jumping</a></li>
+                        <li><a href="nautique.html">Sports nautiques</a></li>
+                        <li><a href="ski.html">Ski</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="theme-switcher">
+                <label class="switch">
+                    <input type="checkbox" id="darkModeToggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </nav>
+    </header>
+
+    <div class="buttons-row">
+        <div class="home-button-container">
+            <a href="travail.html" class="home-button">
+                <i class="fa-solid fa-chevron-left"></i>
+                Retour
+            </a>
+        </div>
+
+        <h1 class="page-title">Projet Selecom</h1>
+
+        <div class="sports-button-container">
+            <a href="lorient.html" class="sports-button">
+                Lorient
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="image-text-row">
+        <div class="blue-box">
+            <p>
+                En février 2024, chez MSM, j'ai pu mener à bien mon premier projet de création d'un shelter. Il s'agissait
+                du shelter Selecom, qui est un petit bâtiment modulaire avec une structure légère. Celui-ci avait pour 
+                but de stocker une armoire électrique pour le client Selecom.
+            </p>
+            <p> 
+               J'ai donc du modéliser le shelter, commander toutes les pièces nécessaires pour l'assembler, puis le mettre
+               en plan pour faciliter le travail des monteurs. Le projet s'est bien passé et le client était satisfait de ma
+               disponibilité car il y a eu beaucoup de changements tout au logn du projet.
+            </p>
+        </div>
+        
+    
+        <div class="image-container">
+            <i class="fa-solid fa-chevron-left chevron chevron-left"></i>
+            <img id="carousel-image" src="public/selecom.png" alt="Image de remplacement">
+            <i class="fa-solid fa-chevron-right chevron chevron-right"></i>
+        </div>
+    </div>   
+
+    <script>
+        const images = [
+            'public/selecom.png',
+            'public/selecom2.png'
+        ];
+    
+        let currentIndex = 0;
+        const carouselImage = document.getElementById('carousel-image');
+        
+        document.querySelector('.chevron-left').addEventListener('click', function() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            carouselImage.src = images[currentIndex];
+        });
+    
+        document.querySelector('.chevron-right').addEventListener('click', function() {
+            currentIndex = (currentIndex + 1) % images.length;
+            carouselImage.src = images[currentIndex];
+        });
+    </script>
+
+    <script src="script.mjs"></script>
+
+</body>
+</html>

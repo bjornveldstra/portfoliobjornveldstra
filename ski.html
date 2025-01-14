@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ski</title>
+    <link rel="stylesheet" href="ski.css">
+    <script src="https://kit.fontawesome.com/0ddf7b2360.js" crossorigin="anonymous"></script>
+    
+</head>
+
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html#accueil">
+                    <img src="public/logo BV.png" alt="Logo BV">
+                </a>
+            </div>            
+            <ul class="menu-hover-fill flex flex-col items-start leading-none text-2xl uppercase space-y-4">
+                <li class="dropdown">
+                    <a href="#formations" data-text="Formations">Formations</a>
+                    <ul class="dropdown-content">
+                        <li><a href="https://www.esaip.org/formation/ingenieur-en-sante-securite-amp-environnement/" target="_blank" rel="noopener noreferrer">ESAIP</a></li>
+                        <li><a href="https://iutnantes.univ-nantes.fr/formations/bachelor-iut-bac3/but-gmp" target="_blank" rel="noopener noreferrer">BUT GMP</a></li>
+                        <li><a href="https://appert.paysdelaloire.e-lyco.fr/etablissement/" target="_blank" rel="noopener noreferrer">Lycée Général</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#experiences" data-text="Expériences">Expériences</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#Vinci">Vinci Facilities</a></li>
+                        <li><a href="#MSM">MSM</a></li>
+                        <li><a href="#Proman">Proman</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#realisations" data-text="Réalisations">Réalisations</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#Projets d'école">Projets d'école</a></li>
+                        <li><a href="#Projets d'entreprise">Projets d'entreprise</a></li>
+                        <li><a href="#Projets personnels">Projets personnels</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#centre" data-text="Centres d'intérêt">Centres d'intérêt</a>
+                    <ul class="dropdown-content">
+                        <li><a href="cliff.html">Cliff jumping</a></li>
+                        <li><a href="nautique.html">Sports nautiques</a></li>
+                        <li><a href="ski.html">Ski</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="theme-switcher">
+                <label class="switch">
+                    <input type="checkbox" id="darkModeToggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </nav>
+    </header>
+
+    <div class="buttons-row">
+        <div class="home-button-container">
+            <a href="index.html#centres" class="home-button">
+                <i class="fa-solid fa-chevron-left"></i>
+                Retour
+            </a>
+        </div>
+
+        <h1 class="page-title">Ski</h1>
+
+        <div class="sports-button-container">
+            <a href="cliff.html" class="sports-button">
+                Cliff jumping
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="video-text-row">
+        <div class="video-container">
+            <iframe
+                src="public/ski.mp4"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+        <div class="blue-box">
+            <p>
+                Je pratique le ski depuis l'âge de 5 ans. Profondément passionné par cette discipline, je ne 
+                me vois pas passer une année sans skier ! Pour tout vous dire, même pendant la période du 
+                Covid-19, lorsque les remontées mécaniques étaient fermées, nous sommes tout de même allés 
+                dans les Alpes, à Courchevel, en utilisant la voiture pour rejoindre les sommets et profiter des pistes.
+            </p>
+            <p>
+                La montagne, j'adore ça ! Pour en profiter au maximum, je n'hésite pas à m'aventurer en hors-piste, même 
+                si ce n'est pas toujours recommandé. Depuis 2024, j'emporte ma GoPro avec moi pour capturer des moments 
+                inoubliables et partager mes aventures sur les réseaux sociaux, afin de revivre ces instants uniques. 
+                Je suis prêt pour la saison 2025 !
+            </p>
+        </div>
+    </div>
+
+    <script src="script.mjs"></script>
+
+</body>
+</html>

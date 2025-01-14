@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="https://kit.fontawesome.com/0ddf7b2360.js" crossorigin="anonymous"></script>
+    
+</head>
+
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html#accueil">
+                    <img src="public/logo BV.png" alt="Logo BV">
+                </a>
+            </div>            
+            <ul class="menu-hover-fill flex flex-col items-start leading-none text-2xl uppercase space-y-4">
+                <li class="dropdown">
+                    <a href="#formations" data-text="Formations">Formations</a>
+                    <ul class="dropdown-content">
+                        <li><a href="https://www.esaip.org/formation/ingenieur-en-sante-securite-amp-environnement/" target="_blank" rel="noopener noreferrer">ESAIP</a></li>
+                        <li><a href="https://iutnantes.univ-nantes.fr/formations/bachelor-iut-bac3/but-gmp" target="_blank" rel="noopener noreferrer">BUT GMP</a></li>
+                        <li><a href="https://appert.paysdelaloire.e-lyco.fr/etablissement/" target="_blank" rel="noopener noreferrer">Lycée Général</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#experiences" data-text="Expériences">Expériences</a>
+                    <ul class="dropdown-content">
+                        <li><a href="vinci.html">Vinci Facilities</a></li>
+                        <li><a href="msm.html">MSM</a></li>
+                        <li><a href="proman.html">Proman</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#realisations" data-text="Réalisations">Réalisations</a>
+                    <ul class="dropdown-content">
+                        <li><a href="ecole.html">Projets d'école</a></li>
+                        <li><a href="travail.html">Projets d'entreprise</a></li>
+                        <li><a href="personnel.html">Projets personnels</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#centre" data-text="Centres d'intérêt">Centres d'intérêt</a>
+                    <ul class="dropdown-content">
+                        <li><a href="cliff.html">Cliff jumping</a></li>
+                        <li><a href="nautique.html">Sports nautiques</a></li>
+                        <li><a href="ski.html">Ski</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="buttons-row">
+        <div class="home-button-container">
+            <a href="personnel.html" class="home-button">
+                <i class="fa-solid fa-chevron-left"></i>
+                Retour
+            </a>
+        </div>
+
+        <h1 class="page-title">Portfolio personnalise</h1>
+
+        <div class="sports-button-container">
+            <a href="agenda.html" class="sports-button">
+                Agenda électronique
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="image-text-row">
+        <div class="blue-box">
+            <p>
+                Oui. Vous l'avez peut-être déjà remarqué, mais ce portfolio a été réalisé uniquement grâce à du code. En effet,
+                depuis 2024, je me suis initié au code informatique. En installant Visual Studio Code, j'ai commencé par les 
+                bases du FrontEnd en apprenant le code HTML et CSS. Puis, en progressant, j'ai commencé à faire du 
+                JavaScript.
+            </p>
+            <p> 
+                En accumulant toutes ces connaissances, j'ai vu l'opportunité de créer un portfolio entièrement personnalisé. 
+                Après plusieurs dizaines d'heures de travail et plus de 10 000 lignes de code, j'ai atteint un résultat dont je suis 
+                extrêmement fier. J'espère qu'il saura également vous convaincre ! 
+            </p>
+        </div>
+        
+    
+        <div class="image-container">
+            <i class="fa-solid fa-chevron-left chevron chevron-left"></i>
+            <img id="carousel-image" src="public/portfolio.png" alt="Image de remplacement">
+            <i class="fa-solid fa-chevron-right chevron chevron-right"></i>
+        </div>
+    </div>   
+
+    <script>
+        const images = [
+            'public/portfolio.png',
+            'public/portfolio2.png',
+            'public/portfolio3.png'
+        ];
+    
+        let currentIndex = 0;
+        const carouselImage = document.getElementById('carousel-image');
+        
+        document.querySelector('.chevron-left').addEventListener('click', function() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            carouselImage.src = images[currentIndex];
+        });
+    
+        document.querySelector('.chevron-right').addEventListener('click', function() {
+            currentIndex = (currentIndex + 1) % images.length;
+            carouselImage.src = images[currentIndex];
+        });
+    </script>
+
+</body>
+</html>

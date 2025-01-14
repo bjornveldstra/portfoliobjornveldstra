@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pliage</title>
+    <link rel="stylesheet" href="pliage.css">
+    <script src="https://kit.fontawesome.com/0ddf7b2360.js" crossorigin="anonymous"></script>
+    
+</head>
+
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html#accueil">
+                    <img src="public/logo BV.png" alt="Logo BV">
+                </a>
+            </div>            
+            <ul class="menu-hover-fill flex flex-col items-start leading-none text-2xl uppercase space-y-4">
+                <li class="dropdown">
+                    <a href="#formations" data-text="Formations">Formations</a>
+                    <ul class="dropdown-content">
+                        <li><a href="https://www.esaip.org/formation/ingenieur-en-sante-securite-amp-environnement/" target="_blank" rel="noopener noreferrer">ESAIP</a></li>
+                        <li><a href="https://iutnantes.univ-nantes.fr/formations/bachelor-iut-bac3/but-gmp" target="_blank" rel="noopener noreferrer">BUT GMP</a></li>
+                        <li><a href="https://appert.paysdelaloire.e-lyco.fr/etablissement/" target="_blank" rel="noopener noreferrer">Lycée Général</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#experiences" data-text="Expériences">Expériences</a>
+                    <ul class="dropdown-content">
+                        <li><a href="vinci.html">Vinci Facilities</a></li>
+                        <li><a href="msm.html">MSM</a></li>
+                        <li><a href="proman.html">Proman</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#realisations" data-text="Réalisations">Réalisations</a>
+                    <ul class="dropdown-content">
+                        <li><a href="ecole.html">Projets d'école</a></li>
+                        <li><a href="travail.html">Projets d'entreprise</a></li>
+                        <li><a href="personnel.html">Projets personnels</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#centre" data-text="Centres d'intérêt">Centres d'intérêt</a>
+                    <ul class="dropdown-content">
+                        <li><a href="cliff.html">Cliff jumping</a></li>
+                        <li><a href="nautique.html">Sports nautiques</a></li>
+                        <li><a href="ski.html">Ski</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="theme-switcher">
+                <label class="switch">
+                    <input type="checkbox" id="darkModeToggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </nav>
+    </header>
+
+    <div class="buttons-row">
+        <div class="home-button-container">
+            <a href="ecole.html" class="home-button">
+                <i class="fa-solid fa-chevron-left"></i>
+                Retour
+            </a>
+        </div>
+
+        <h1 class="page-title">Mecanofacture</h1>
+
+        <div class="sports-button-container">
+            <a href="basculeur.html" class="sports-button">
+                Impression 3D
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="image-text-row">
+        <div class="blue-box">
+            <p>
+                En troisième année de BUT GMP, nous avons en groupe de 3 réalisé une éco-conception d'un pied de table 
+                en acier. Le but était de minimiser la quantité de matière ainsi que le nombre de processus de réalisation.
+                Pour respecter ces objectifs, nous avons pensé à un pied de table ne nécéssitant pas de soudage.
+            </p>
+            <p> 
+               C'était un véritable défi de n'utiliser que la découpe jet d'eau et la plieuse. En effet, la phase de pliage 
+               était délicate étant donné que nous avons du laisser un tout petit espace entre deux poinçons, mais ce fût un succès.
+               Vous pouvez voir par vous-même <a href="https://youtube.com/shorts/FuiYOHOnRF8" target="_blank style="text-decoration: underline;">en cliquant sur ce lien.</a>
+            </p>
+        </div>
+        
+        <div class="image-container">
+            <i class="fa-solid fa-chevron-left chevron chevron-left"></i>
+            <img id="carousel-image" src="public/pliage.png" alt="Image de remplacement">
+            <i class="fa-solid fa-chevron-right chevron chevron-right"></i>
+        </div>
+    </div>   
+
+    <script>
+        const images = [
+            'public/pliage.png',
+            'public/pliage2.png',
+            'public/pliage3.png'
+        ];
+    
+        let currentIndex = 0;
+        const carouselImage = document.getElementById('carousel-image');
+        
+        document.querySelector('.chevron-left').addEventListener('click', function() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            carouselImage.src = images[currentIndex];
+        });
+    
+        document.querySelector('.chevron-right').addEventListener('click', function() {
+            currentIndex = (currentIndex + 1) % images.length;
+            carouselImage.src = images[currentIndex];
+        });
+    </script>
+
+<script src="script.mjs"></script>
+
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lorient</title>
+    <link rel="stylesheet" href="lorient.css">
+    <script src="https://kit.fontawesome.com/0ddf7b2360.js" crossorigin="anonymous"></script>
+    
+</head>
+
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html#accueil">
+                    <img src="public/logo BV.png" alt="Logo BV">
+                </a>
+            </div>            
+            <ul class="menu-hover-fill flex flex-col items-start leading-none text-2xl uppercase space-y-4">
+                <li class="dropdown">
+                    <a href="#formations" data-text="Formations">Formations</a>
+                    <ul class="dropdown-content">
+                        <li><a href="https://www.esaip.org/formation/ingenieur-en-sante-securite-amp-environnement/" target="_blank" rel="noopener noreferrer">ESAIP</a></li>
+                        <li><a href="https://iutnantes.univ-nantes.fr/formations/bachelor-iut-bac3/but-gmp" target="_blank" rel="noopener noreferrer">BUT GMP</a></li>
+                        <li><a href="https://appert.paysdelaloire.e-lyco.fr/etablissement/" target="_blank" rel="noopener noreferrer">Lycée Général</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#experiences" data-text="Expériences">Expériences</a>
+                    <ul class="dropdown-content">
+                        <li><a href="vinci.html">Vinci Facilities</a></li>
+                        <li><a href="msm.html">MSM</a></li>
+                        <li><a href="proman.html">Proman</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#realisations" data-text="Réalisations">Réalisations</a>
+                    <ul class="dropdown-content">
+                        <li><a href="ecole.html">Projets d'école</a></li>
+                        <li><a href="travail.html">Projets d'entreprise</a></li>
+                        <li><a href="personnel.html">Projets personnels</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#centre" data-text="Centres d'intérêt">Centres d'intérêt</a>
+                    <ul class="dropdown-content">
+                        <li><a href="cliff.html">Cliff jumping</a></li>
+                        <li><a href="nautique.html">Sports nautiques</a></li>
+                        <li><a href="ski.html">Ski</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="theme-switcher">
+                <label class="switch">
+                    <input type="checkbox" id="darkModeToggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </nav>
+    </header>
+
+    <div class="buttons-row">
+        <div class="home-button-container">
+            <a href="travail.html" class="home-button">
+                <i class="fa-solid fa-chevron-left"></i>
+                Retour
+            </a>
+        </div>
+
+        <h1 class="page-title">Projet Lorient</h1>
+
+        <div class="sports-button-container">
+            <a href="tours.html" class="sports-button">
+                Tours
+                <i class="fa-solid fa-chevron-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="image-text-row">
+        <div class="blue-box">
+            <p>
+                En mai 2024, chez MSM, j'ai été désigné pour piloter un projet d'envergure : le projet Lorient. Celui-ci 
+                consistait à installer un nouveau shelter sur le toit d'un immeuble de 40 mètres de haut à Lorient. Le 
+                shelter devait reposer sur un châssis soutenu par des potelets existants et accompagné de quatre plateformes d'accès.
+            </p>
+            <p> 
+                J'ai pris en charge l'ensemble du projet, depuis la modélisation complète du shelter et des plateformes d'accès, 
+                jusqu'à la gestion des aspects techniques et logistiques. Pour garantir le meilleur rapport qualité-prix, j'ai 
+                contacté plusieurs chaudronneries afin de comparer leurs devis. Une fois la fabrication des plateformes lancée, 
+                j'ai personnellement procédé à leur assemblage dans l'atelier, pièce par pièce, afin de vérifier qu'aucun élément 
+                ne manquait. Cette étape m'a mobilisé pendant deux journées complètes.
+            </p>
+            <p> 
+                Porté par l'envie de mener ce projet à bien, j'ai également décidé de me rendre sur le chantier le jour de 
+                l'installation pour prêter main-forte aux deux monteurs MSM présents avec moi. La journée, bien que longue et 
+                éprouvante - nous avons terminé à 23 heures - a été une expérience particulièrement enrichissante et formatrice.
+            </p>
+        </div>
+        
+    
+        <div class="image-container">
+            <i class="fa-solid fa-chevron-left chevron chevron-left"></i>
+            <img id="carousel-image" src="public/lorient.png" alt="Image de remplacement">
+            <i class="fa-solid fa-chevron-right chevron chevron-right"></i>
+        </div>
+    </div>   
+
+    <script>
+        const images = [
+            'public/lorient.png',
+            'public/lorient2.png',
+            'public/lorient3.png'
+        ];
+    
+        let currentIndex = 0;
+        const carouselImage = document.getElementById('carousel-image');
+        
+        document.querySelector('.chevron-left').addEventListener('click', function() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            carouselImage.src = images[currentIndex];
+        });
+    
+        document.querySelector('.chevron-right').addEventListener('click', function() {
+            currentIndex = (currentIndex + 1) % images.length;
+            carouselImage.src = images[currentIndex];
+        });
+    </script>
+
+    <script src="script.mjs"></script>
+
+</body>
+</html>
