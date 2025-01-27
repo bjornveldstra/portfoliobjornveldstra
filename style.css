@@ -1550,3 +1550,100 @@ body.dark-mode .hover-text {
 }
 
 
+/*-------------Version mobile------------*/
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .conteneur {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+/*--------------Titre--------------*/
+
+@media (max-width: 770px) {
+  .portfolio-title {
+    margin-top: 20px; 
+    margin-left: 100px; 
+    position: static; 
+    text-align: center; 
+  }
+
+  .portfolio-title h1 {
+    font-size: 50px; /* Réduit la taille de la police */
+  }
+}
+
+/* Responsive pour très petits écrans */
+@media (max-width: 480px) {
+  .portfolio-title h1 {
+    font-size: 50px; /* Réduction supplémentaire pour les écrans étroits */
+  }
+}
+
+
+/*--------------A propos-------------*/
+
+@media (max-width: 770px) {
+  .about-section {
+    width: 75%; /* Élargir un peu le rectangle bleu */
+    margin-left: 130px; /* Centre horizontalement */
+    margin-top: 20px; /* Rapproche le rectangle du titre */
+    padding: 20px; /* Ajuste les marges internes */
+  }
+
+  .thumb {
+    width: 80px; /* Rétrécit la photo */
+    height: 80px;
+    border: 3px solid #ffffff;
+  }
+
+  .description h3 {
+    font-size: 20px; /* Réduit la taille du titre */
+  }
+
+  .description p {
+    font-size: 16px; /* Réduit la taille du texte */
+    line-height: 1.4; /* Ajuste l'espacement entre les lignes */
+  }
+
+  .description p a, .download-button {
+    padding: 8px 15px; /* Rétrécit les boutons */
+    font-size: 14px; /* Diminue la taille de la police */
+  }
+
+  .download-button i {
+    font-size: 16px; /* Diminue l'icône */
+  }
+
+  /* Centrer la photo et le texte */
+  .about-section {
+    flex-direction: column; /* Colonne pour aligner la photo au-dessus du texte */
+    align-items: center;
+    text-align: center;
+  }
+
+  .thumb {
+    margin-bottom: 15px; /* Ajoute un espacement sous la photo */
+  }
+
+  .description {
+    text-align: center;
+  }
+}
+
+
+
+
+

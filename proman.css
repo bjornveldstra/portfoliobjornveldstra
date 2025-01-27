@@ -303,11 +303,6 @@ body.dark-mode .sports-button:hover, .sports-button:focus {
 
 /*-----------Titre------------*/
 
-@font-face {
-    font-family: 'Brillante';
-    src: url('public/Brillante.ttf') format('truetype'); 
-}
-
 .page-title {
     font-family: 'Brillante', sans-serif;
     font-size: 105px;
