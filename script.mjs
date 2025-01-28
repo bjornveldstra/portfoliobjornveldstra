@@ -105,17 +105,14 @@ function navigateToPage() {
 
 /*--------------Fonction darkmode--------------*/
 
-
 document.addEventListener('DOMContentLoaded', function () {
     const darkModeToggle = document.getElementById('darkModeToggle');
 
-    // Appliquer l'état du dark mode au chargement de la page
     if (localStorage.getItem('darkMode') === 'enabled') {
         document.body.classList.add('dark-mode');
         if (darkModeToggle) darkModeToggle.checked = true;
     }
 
-    // Mettre à jour l'état du dark mode sur changement du bouton
     if (darkModeToggle) {
         darkModeToggle.addEventListener('change', function () {
             if (darkModeToggle.checked) {
@@ -127,4 +124,18 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+});
+
+
+
+
+
+// Sélectionner le menu burger et la liste
+const burgerMenu = document.querySelector('.burger-menu');
+const navMenu = document.querySelector('header nav ul');
+
+// Ajouter un événement au clic
+burgerMenu.addEventListener('click', () => {
+  burgerMenu.classList.toggle('active');
+  navMenu.classList.toggle('active');
 });

@@ -1223,9 +1223,7 @@ body.dark-mode .see-more-btn:hover {
 }
 
 
-
-
-/* ----------Realisations-------------*/
+/*----------Realisations-------------*/
 
 .infocardContainer * {
     font-family: 'Fira Sans Condensed', sans-serif;
@@ -1572,12 +1570,12 @@ body.dark-mode .hover-text {
 
 /*--------------Titre--------------*/
 
-@media (max-width: 770px) {
+@media (max-width: 768px) {
   .portfolio-title {
-    margin-top: 20px; 
-    margin-left: 100px; 
-    position: static; 
-    text-align: center; 
+    margin-top: 20px; /* Réduit l'espacement en haut */
+    margin-left: 0; /* Enlève le décalage à gauche */
+    position: static; /* Supprime le positionnement absolu */
+    text-align: center; /* Centre horizontalement le texte */
   }
 
   .portfolio-title h1 {
@@ -1593,12 +1591,39 @@ body.dark-mode .hover-text {
 }
 
 
+/*----------Bouton switch------------*/
+
+@media (max-width: 768px) {
+  .theme-switcher {
+    position: relative; /* Change la position absolue */
+    top: auto; /* Supprime le positionnement vertical */
+    margin: 20px auto; /* Ajoute un espacement et centre horizontalement */
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
+/*--------------Logo BV-------*/
+
+@media (max-width: 768px) {
+  header nav .logo {
+    margin-left: 1px; /* Réduit la marge gauche pour le décaler */
+  }
+
+  .logo img {
+    width: 80px; /* Réduit légèrement la taille pour un rendu plus harmonieux si besoin */
+  }
+}
+
+
 /*--------------A propos-------------*/
 
-@media (max-width: 770px) {
+@media (max-width: 768px) {
   .about-section {
-    width: 75%; /* Élargir un peu le rectangle bleu */
-    margin-left: 130px; /* Centre horizontalement */
+    width: 85%; /* Élargir un peu le rectangle bleu */
+    margin-left: auto; /* Centre horizontalement */
+    margin-right: auto;
     margin-top: 20px; /* Rapproche le rectangle du titre */
     padding: 20px; /* Ajuste les marges internes */
   }
@@ -1643,7 +1668,223 @@ body.dark-mode .hover-text {
   }
 }
 
+@media (max-width: 768px) {
+  /* Supprimer la timeline et rectangle bleu */
+  .left-panel {
+    display: none; /* Cache le rectangle bleu */
+  }
+
+  .circle-container {
+    display: none; /* Cache les cercles de la timeline */
+  }
+
+  /* Barre de menu simplifiée */
+  header nav {
+    justify-content: space-between; /* Ajuste l'espacement des éléments */
+    padding: 10px 15px;
+  }
+
+  header nav ul {
+    display: none; /* Cache le menu horizontal */
+    flex-direction: column; /* Adapté si on veut le réactiver */
+    background: #b8d6f5;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+
+  header nav ul li {
+    padding: 10px 20px;
+  }
+
+  header nav ul li a {
+    font-size: 16px;
+    color: #333;
+    text-align: left;
+  }
+
+  body.dark-mode header nav ul {
+    background: #ff6b7a; /* Remplace le bleu clair par un rouge adapté au dark mode */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5); /* Renforce l'ombre pour un effet plus prononcé */
+  }
+  
+  body.dark-mode header nav ul li a {
+    color: #ffffff; /* Le texte devient blanc pour le contraste */
+  }
+  
+  body.dark-mode header nav ul li a:hover {
+    background-color: rgb(250, 211, 211); /* Conserve l'effet hover mais en l'adaptant au rouge */
+    color: #1d1f20; /* Ajoute une couleur sombre pour le texte lors du hover */
+  }
+  
 
 
+/* ----------------- Version ordinateur ----------------- */
+@media (min-width: 769px) {
+  .burger-menu {
+    display: none; /* Cache le conteneur du menu burger */
+  }
+
+  .burger-menu span {
+    display: none; /* Cache les barres */
+  }
+
+  header nav ul {
+    display: flex; /* Affiche uniquement le menu classique */
+    flex-direction: row;
+    gap: 20px; /* Espacement entre les liens */
+  }
+
+  header nav ul.active {
+    display: none; /* Assure que l'état "actif" du menu burger ne force pas l'affichage */
+  }
+}
+
+/* ----------------- Version mobile ----------------- */
+@media (max-width: 768px) {
+  /* Cache le menu classique */
+  header nav ul {
+    display: none; /* Cache le menu classique par défaut */
+  }
+
+  /* Affiche le menu burger */
+  .burger-menu {
+    display: flex; /* Montre le conteneur burger */
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    cursor: pointer;
+  }
+
+  .burger-menu span {
+    display: block; /* Affiche les barres */
+    width: 30px;
+    height: 3px;
+    background-color: #333; /* Couleur des barres */
+    transition: all 0.3s ease;
+  }
+
+  /* Animation du menu burger lorsqu'il est actif */
+  .burger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(9px);
+  }
+
+  .burger-menu.active span:nth-child(2) {
+    opacity: 0; /* Cache la barre du milieu */
+  }
+
+  .burger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-9px);
+  }
+
+  /* Afficher le menu déroulant */
+  header nav ul.active {
+    display: flex; /* Affiche les liens du menu burger */
+    flex-direction: column; /* Aligne les liens verticalement */
+    background: #b8d6f5; /* Couleur de fond du menu */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+
+  header nav ul li {
+    padding: 10px 15px; /* Ajoute de la marge pour les liens */
+    text-align: center; /* Centre les liens */
+  }
+
+  header nav ul li a {
+    text-decoration: none;
+    color: #333; /* Couleur des liens */
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+
+  header nav ul li a:hover {
+    color: #007BFF; /* Couleur des liens au survol */
+  }
+}
 
 
+/*----------Formations-----------*/
+
+@media (max-width: 768px) {
+  .timeline {
+    width: 90%; /* Réduit la largeur pour s'adapter aux petits écrans */
+    margin: 20px auto; /* Centre la timeline */
+    display: flex;
+    flex-direction: column; /* Aligne les éléments verticalement */
+    gap: 30px; /* Ajoute un espacement entre les rectangles */
+  }
+
+  .timeline-content {
+    width: 100%; /* Les rectangles occupent toute la largeur disponible */
+    margin: 0 auto; /* Centre chaque rectangle */
+    padding: 15px; /* Ajuste les marges internes */
+  }
+
+  .timeline-middle {
+    display: none; /* Cache la ligne centrale pour la version mobile */
+  }
+
+  .timeline-circle {
+    position: relative;
+    top: -15px;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-image: linear-gradient(45deg, #007BFF, #971cd9, #2f1695);
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+  body.dark-mode .timeline-circle {
+    background-image: linear-gradient(45deg, #dc1010, #960505, #f34a4a);
+  }
+}
+
+
+/*--------Experiences--------*/
+
+@media (max-width: 768px) {
+  .experience-container {
+    margin: 0 auto; /* Centre le conteneur */
+    flex-direction: column; /* Aligne les cartes verticalement */
+    gap: 40px; /* Ajoute un espacement uniforme entre les cartes */
+    margin-top: 50px; /* Réduit l'espacement supérieur */
+  }
+
+  .experience-card {
+    width: 85%; /* Les cartes occupent 90% de la largeur */
+    height: auto; /* Ajuste automatiquement la hauteur */
+    margin: 0 auto; /* Centre les cartes */
+  }
+
+  .experience-card-inner {
+    height: 280px; /* Ajuste la hauteur des cartes */
+  }
+
+  .experience-card-front, .experience-card-back {
+    border-radius: 10px; /* Conserve l'arrondi */
+  }
+
+  .experience-card-back {
+    padding: 15px; /* Réduit les marges internes */
+    text-align: center; /* Centre le texte */
+  }
+
+  .see-more-btn {
+    width: 100%; /* Le bouton occupe toute la largeur */
+    padding: 10px 15px; /* Ajuste les marges internes du bouton */
+    font-size: 14px; /* Réduit la taille de la police */
+  }
+}
+
+}
