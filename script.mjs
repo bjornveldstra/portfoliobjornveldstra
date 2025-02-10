@@ -126,16 +126,3 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
-
-
-
-
-// Sélectionner le menu burger et la liste
-const burgerMenu = document.querySelector('.burger-menu');
-const navMenu = document.querySelector('header nav ul');
-
-// Ajouter un événement au clic
-burgerMenu.addEventListener('click', () => {
-  burgerMenu.classList.toggle('active');
-  navMenu.classList.toggle('active');
-});

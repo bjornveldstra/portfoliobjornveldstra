@@ -1548,6 +1548,7 @@ body.dark-mode .hover-text {
 }
 
 
+
 /*-------------Version mobile------------*/
 
 @media (max-width: 768px) {
@@ -1568,25 +1569,56 @@ body.dark-mode .hover-text {
 }
 
 
+/*------------Cubes-----------*/
+
+@media (max-width: 768px) {
+  .cube {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .cube-for {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .cube-exp {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .cube-rea {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .cube-cen {
+    display: none;
+  }
+}
+
 /*--------------Titre--------------*/
 
 @media (max-width: 768px) {
   .portfolio-title {
-    margin-top: 20px; /* Réduit l'espacement en haut */
-    margin-left: 0; /* Enlève le décalage à gauche */
-    position: static; /* Supprime le positionnement absolu */
-    text-align: center; /* Centre horizontalement le texte */
+    margin-top: 20px; 
+    margin-left: 0;
+    position: static; 
+    text-align: center;
   }
 
   .portfolio-title h1 {
-    font-size: 50px; /* Réduit la taille de la police */
+    font-size: 50px;
   }
 }
 
-/* Responsive pour très petits écrans */
 @media (max-width: 480px) {
   .portfolio-title h1 {
-    font-size: 50px; /* Réduction supplémentaire pour les écrans étroits */
+    font-size: 50px; 
   }
 }
 
@@ -1595,9 +1627,9 @@ body.dark-mode .hover-text {
 
 @media (max-width: 768px) {
   .theme-switcher {
-    position: relative; /* Change la position absolue */
-    top: auto; /* Supprime le positionnement vertical */
-    margin: 20px auto; /* Ajoute un espacement et centre horizontalement */
+    position: relative;
+    top: auto;
+    margin-right: 0; 
     display: flex;
     justify-content: center;
   }
@@ -1608,59 +1640,58 @@ body.dark-mode .hover-text {
 
 @media (max-width: 768px) {
   header nav .logo {
-    margin-left: 1px; /* Réduit la marge gauche pour le décaler */
+    margin-left: 0%; 
   }
 
   .logo img {
-    width: 80px; /* Réduit légèrement la taille pour un rendu plus harmonieux si besoin */
+    width: 80px; 
   }
 }
 
 
-/*--------------A propos-------------*/
+/*--------------A propos et barre de menu-------------*/
 
 @media (max-width: 768px) {
   .about-section {
-    width: 85%; /* Élargir un peu le rectangle bleu */
-    margin-left: auto; /* Centre horizontalement */
+    width: 100%;
+    margin-left: auto;
     margin-right: auto;
-    margin-top: 20px; /* Rapproche le rectangle du titre */
-    padding: 20px; /* Ajuste les marges internes */
+    margin-top: 20px;
+    padding: 20px; 
   }
 
   .thumb {
-    width: 80px; /* Rétrécit la photo */
+    width: 80px;
     height: 80px;
     border: 3px solid #ffffff;
   }
 
   .description h3 {
-    font-size: 20px; /* Réduit la taille du titre */
+    font-size: 20px;
   }
 
   .description p {
-    font-size: 16px; /* Réduit la taille du texte */
-    line-height: 1.4; /* Ajuste l'espacement entre les lignes */
+    font-size: 16px;
+    line-height: 1.4; 
   }
 
   .description p a, .download-button {
-    padding: 8px 15px; /* Rétrécit les boutons */
-    font-size: 14px; /* Diminue la taille de la police */
+    padding: 8px 15px; 
+    font-size: 14px; 
   }
 
   .download-button i {
-    font-size: 16px; /* Diminue l'icône */
+    font-size: 16px; 
   }
 
-  /* Centrer la photo et le texte */
   .about-section {
-    flex-direction: column; /* Colonne pour aligner la photo au-dessus du texte */
+    flex-direction: column;
     align-items: center;
     text-align: center;
   }
 
   .thumb {
-    margin-bottom: 15px; /* Ajoute un espacement sous la photo */
+    margin-bottom: 15px; 
   }
 
   .description {
@@ -1669,24 +1700,22 @@ body.dark-mode .hover-text {
 }
 
 @media (max-width: 768px) {
-  /* Supprimer la timeline et rectangle bleu */
   .left-panel {
-    display: none; /* Cache le rectangle bleu */
+    display: none; 
   }
 
   .circle-container {
-    display: none; /* Cache les cercles de la timeline */
+    display: none;
   }
 
-  /* Barre de menu simplifiée */
   header nav {
-    justify-content: space-between; /* Ajuste l'espacement des éléments */
+    justify-content: space-between;
     padding: 10px 15px;
   }
 
   header nav ul {
-    display: none; /* Cache le menu horizontal */
-    flex-direction: column; /* Adapté si on veut le réactiver */
+    display: none;
+    flex-direction: column;
     background: #b8d6f5;
     position: absolute;
     top: 100%;
@@ -1708,182 +1737,93 @@ body.dark-mode .hover-text {
   }
 
   body.dark-mode header nav ul {
-    background: #ff6b7a; /* Remplace le bleu clair par un rouge adapté au dark mode */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5); /* Renforce l'ombre pour un effet plus prononcé */
+    background: #ff6b7a;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
   }
   
   body.dark-mode header nav ul li a {
-    color: #ffffff; /* Le texte devient blanc pour le contraste */
+    color: #ffffff;
   }
   
   body.dark-mode header nav ul li a:hover {
-    background-color: rgb(250, 211, 211); /* Conserve l'effet hover mais en l'adaptant au rouge */
-    color: #1d1f20; /* Ajoute une couleur sombre pour le texte lors du hover */
+    background-color: rgb(250, 211, 211);
+    color: #1d1f20;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
   
-
-
-/* ----------------- Version ordinateur ----------------- */
-@media (min-width: 769px) {
-  .burger-menu {
-    display: none; /* Cache le conteneur du menu burger */
-  }
-
-  .burger-menu span {
-    display: none; /* Cache les barres */
-  }
-
-  header nav ul {
-    display: flex; /* Affiche uniquement le menu classique */
-    flex-direction: row;
-    gap: 20px; /* Espacement entre les liens */
-  }
-
-  header nav ul.active {
-    display: none; /* Assure que l'état "actif" du menu burger ne force pas l'affichage */
-  }
-}
-
-/* ----------------- Version mobile ----------------- */
-@media (max-width: 768px) {
-  /* Cache le menu classique */
-  header nav ul {
-    display: none; /* Cache le menu classique par défaut */
-  }
-
-  /* Affiche le menu burger */
-  .burger-menu {
-    display: flex; /* Montre le conteneur burger */
-    flex-direction: column;
-    justify-content: center;
-    gap: 4px;
-    cursor: pointer;
-  }
-
-  .burger-menu span {
-    display: block; /* Affiche les barres */
-    width: 30px;
-    height: 3px;
-    background-color: #333; /* Couleur des barres */
-    transition: all 0.3s ease;
-  }
-
-  /* Animation du menu burger lorsqu'il est actif */
-  .burger-menu.active span:nth-child(1) {
-    transform: rotate(45deg) translateY(9px);
-  }
-
-  .burger-menu.active span:nth-child(2) {
-    opacity: 0; /* Cache la barre du milieu */
-  }
-
-  .burger-menu.active span:nth-child(3) {
-    transform: rotate(-45deg) translateY(-9px);
-  }
-
-  /* Afficher le menu déroulant */
-  header nav ul.active {
-    display: flex; /* Affiche les liens du menu burger */
-    flex-direction: column; /* Aligne les liens verticalement */
-    background: #b8d6f5; /* Couleur de fond du menu */
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    padding: 10px 0;
-    z-index: 1000;
-  }
-
-  header nav ul li {
-    padding: 10px 15px; /* Ajoute de la marge pour les liens */
-    text-align: center; /* Centre les liens */
-  }
-
-  header nav ul li a {
-    text-decoration: none;
-    color: #333; /* Couleur des liens */
-    font-weight: bold;
-    transition: color 0.3s ease;
-  }
-
-  header nav ul li a:hover {
-    color: #007BFF; /* Couleur des liens au survol */
-  }
-}
-
 
 /*----------Formations-----------*/
 
 @media (max-width: 768px) {
   .timeline {
-    width: 90%; /* Réduit la largeur pour s'adapter aux petits écrans */
-    margin: 20px auto; /* Centre la timeline */
+    width: 60%; 
+    margin: 20px auto;
     display: flex;
-    flex-direction: column; /* Aligne les éléments verticalement */
-    gap: 30px; /* Ajoute un espacement entre les rectangles */
+    flex-direction: column; 
+    gap: 30px;
   }
 
   .timeline-content {
-    width: 100%; /* Les rectangles occupent toute la largeur disponible */
-    margin: 0 auto; /* Centre chaque rectangle */
-    padding: 15px; /* Ajuste les marges internes */
+    width: 90%;
+    margin: 0 auto;
+    padding: 15px;
   }
 
   .timeline-middle {
-    display: none; /* Cache la ligne centrale pour la version mobile */
+    display: none;
   }
 
-  .timeline-circle {
-    position: relative;
-    top: -15px;
-    left: 50%;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-image: linear-gradient(45deg, #007BFF, #971cd9, #2f1695);
-    transform: translateX(-50%);
-    z-index: 1;
-  }
-
-  body.dark-mode .timeline-circle {
-    background-image: linear-gradient(45deg, #dc1010, #960505, #f34a4a);
+  .timeline-title {
+    display: block; 
+    text-align: center; 
+    font-size: 40px; 
+    font-weight: bold;
+    margin-bottom: 10px; 
+    color: #007BFF;
+    font-family: 'Brillante', sans-serif;
   }
 }
+
 
 
 /*--------Experiences--------*/
 
 @media (max-width: 768px) {
   .experience-container {
-    margin: 0 auto; /* Centre le conteneur */
-    flex-direction: column; /* Aligne les cartes verticalement */
-    gap: 40px; /* Ajoute un espacement uniforme entre les cartes */
-    margin-top: 50px; /* Réduit l'espacement supérieur */
+    margin: 0 auto;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 50px;
   }
 
   .experience-card {
-    width: 85%; /* Les cartes occupent 90% de la largeur */
-    height: auto; /* Ajuste automatiquement la hauteur */
-    margin: 0 auto; /* Centre les cartes */
+    width: 85%; 
+    height: auto; 
+    margin: 0 auto; 
   }
 
   .experience-card-inner {
-    height: 280px; /* Ajuste la hauteur des cartes */
+    height: 280px; 
   }
 
   .experience-card-front, .experience-card-back {
-    border-radius: 10px; /* Conserve l'arrondi */
+    border-radius: 10px;
   }
 
   .experience-card-back {
-    padding: 15px; /* Réduit les marges internes */
-    text-align: center; /* Centre le texte */
+    padding: 15px; 
+    text-align: center; 
   }
 
   .see-more-btn {
-    width: 100%; /* Le bouton occupe toute la largeur */
-    padding: 10px 15px; /* Ajuste les marges internes du bouton */
-    font-size: 14px; /* Réduit la taille de la police */
+    width: 100%; 
+    padding: 10px 15px; 
+    font-size: 14px; 
   }
 }
 
