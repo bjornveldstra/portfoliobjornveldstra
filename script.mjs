@@ -40,8 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const texts = {
         accueil: "Bienvenue sur mon portfolio ! Explorez les sections pour en apprendre davantage sur moi.",
-        formations: "Ici, vous trouverez les formations que j'ai faites à partir de mon lycée. N'hésitez pas à en savoir plus !",
-        experiences: "Parmi mes expériences professionnelles, j'ai pu travailler dans deux entreprises en alternance, et une en intérim.",
+        formations: "Ici, vous trouverez les formations en études supérieures. N'hésitez pas à en savoir plus !",
+        experiences: "Parmi mes expériences professionnelles, j'ai pu travailler dans trois entreprises en alternance.",
         realisations: "J'ai aussi eu l'opportunité de faire de nombreux projets à l'école, en entreprise, mais aussi chez moi !",
         centres: "Cliff jumping, sports nautiques, ski,... Découvrez en vidéo mes centres d'intérêt favoris !"
     };

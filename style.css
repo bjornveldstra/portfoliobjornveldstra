@@ -1063,6 +1063,10 @@ body.dark-mode .download-button:hover {
     transition: opacity 0.5s ease, transform 0.5s ease;
   }
 
+body.dark-mode .timeline-content a[href*="estp"] .timeline-image {
+  content: url('public/logo\ estp2.png');
+}
+  
 body.dark-mode .timeline-content a[href*="esaip"] .timeline-image {
     content: url('public/logo esaip2.png');
 }
@@ -1071,10 +1075,6 @@ body.dark-mode .timeline-content a[href*="iutnantes"] .timeline-image {
     content: url('public/logo iut2.png');
 }
 
-body.dark-mode .timeline-content a[href*="appert"] .timeline-image {
-  content: url('public/logo appert2.png');
-}
-  
   .timeline-content:hover .rectangle-overlay {
     width: 0; 
   }
@@ -1118,7 +1118,6 @@ body.dark-mode .timeline-content a[href*="appert"] .timeline-image {
         background-image: linear-gradient(45deg, #dc1010, #960505, #f34a4a);
     }
 }
-
   
 
 /*----------Experiences-------------*/
